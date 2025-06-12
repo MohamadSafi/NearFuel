@@ -1,6 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Wallet, Zap, Users, Github, FileText, Star } from 'lucide-react';
+import {
+  ArrowRight,
+  Wallet,
+  Zap,
+  Users,
+  Github,
+  FileText,
+  Star,
+} from 'lucide-react';
 import { useNear } from '../context/NearContext';
 
 const LandingPage = () => {
@@ -10,7 +18,8 @@ const LandingPage = () => {
     {
       icon: <Wallet className="w-8 h-8 text-blue-500" />,
       title: 'Connect Wallet',
-      description: 'Link your NEAR wallet to get started with zero setup hassle.',
+      description:
+        'Link your NEAR wallet to get started with zero setup hassle.',
     },
     {
       icon: <Zap className="w-8 h-8 text-cyan-500" />,
@@ -20,7 +29,8 @@ const LandingPage = () => {
     {
       icon: <Users className="w-8 h-8 text-purple-500" />,
       title: 'Sponsor Pays Gas',
-      description: 'Community sponsors cover your transaction costs automatically.',
+      description:
+        'Community sponsors cover your transaction costs automatically.',
     },
   ];
 
@@ -28,19 +38,22 @@ const LandingPage = () => {
     {
       name: 'Alex Chen',
       role: 'DeFi Enthusiast',
-      content: 'Finally, I can try new dApps without risking my NEAR balance. Game changer!',
+      content:
+        'Finally, I can try new dApps without risking my NEAR balance. Game changer!',
       rating: 5,
     },
     {
       name: 'Sarah Kim',
       role: 'NFT Creator',
-      content: 'NearFuel helped me onboard new users who were hesitant about gas fees.',
+      content:
+        'NearFuel helped me onboard new users who were hesitant about gas fees.',
       rating: 5,
     },
     {
       name: 'Mike Johnson',
       role: 'Developer',
-      content: 'Perfect for user acquisition. My app usage increased 300% after integration.',
+      content:
+        'Perfect for user acquisition. My app usage increased 300% after integration.',
       rating: 5,
     },
   ];
@@ -54,13 +67,14 @@ const LandingPage = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Use NEAR apps with{' '}
-              <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-500 to-cyan-500 gradient-text inline-block">
                 zero gas fees
               </span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              NearFuel lets you try apps without paying gas. Sponsors cover it. You just click.
-              Experience the future of frictionless blockchain interaction.
+              NearFuel lets you try apps without paying gas. Sponsors cover it.
+              You just click. Experience the future of frictionless blockchain
+              interaction.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {isSignedIn ? (
@@ -131,7 +145,8 @@ const LandingPage = () => {
               What Users Are Saying
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Join thousands of users who are already experiencing gas-free NEAR interactions
+              Join thousands of users who are already experiencing gas-free NEAR
+              interactions
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -142,7 +157,10 @@ const LandingPage = () => {
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star
+                      key={i}
+                      className="w-4 h-4 text-yellow-400 fill-current"
+                    />
                   ))}
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
@@ -169,7 +187,8 @@ const LandingPage = () => {
             Ready to Experience Gas-Free NEAR?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join our community and start using NEAR apps without worrying about transaction costs.
+            Join our community and start using NEAR apps without worrying about
+            transaction costs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
