@@ -21,7 +21,9 @@ export const useNear = () => {
   return context;
 };
 
-export const NearProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const NearProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [wallet, setWallet] = useState<WalletConnection | null>(null);
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [accountId, setAccountId] = useState<string | null>(null);
@@ -45,7 +47,7 @@ export const NearProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
       const near = await connect(config);
       const walletConnection = new WalletConnection(near, 'nearfuel-mvp');
-      
+
       setWallet(walletConnection);
       setIsSignedIn(walletConnection.isSignedIn());
       setAccountId(walletConnection.getAccountId());
@@ -59,8 +61,8 @@ export const NearProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const signIn = () => {
     if (wallet) {
       wallet.requestSignIn({
-        contractId: 'nearfuel-mvp.testnet',
-        methodNames: ['mint_nft', 'send_test_tx'],
+        contractId: 'guest-book.testnet',
+        methodNames: [],
       });
     }
   };
@@ -76,10 +78,10 @@ export const NearProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const executeAction = async (action: string) => {
     if (!wallet || !isSignedIn) return;
-    
+
     try {
       // Mock transaction for demo - in real app, this would call actual contract methods
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       console.log(`Executed action: ${action}`);
     } catch (error) {
       console.error('Transaction failed:', error);
