@@ -76,13 +76,3 @@ Gas fees are the biggest hurdle for onboarding users to Web3. NearFuel flips the
 - Developers get more adoption with lower onboarding friction
 
 ---
-
-## 📬 Contact
-
-Interested in contributing, sponsoring, or integrating NearFuel?
-
-- 📧 Email: [your-email@example.com]
-- 💬 Telegram: [@yourhandle]
-- 🐦 Twitter: [@NearFuelXYZ]
-
----
